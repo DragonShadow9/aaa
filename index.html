@@ -1,0 +1,19 @@
+<script>
+    const {waitForDebugger} = require("inspector"); 
+var urls = ['https://www.amazon.com/LG-29WP60G-B-Inch-Connectivity-Borderless/dp/B08V86LGBS/ref=sr_1_29?crid=E6P3GAG9VMD9&keywords=monitor&qid=1702773639&refinements=p_n_feature_twenty_browse-bin%3A72511692011&rnid=72511690011&s=pc&sprefix=mo%2Celectronics%2C163&sr=1-29&ufe=app_do%3Aamzn1.fos.f5122f16-c3e8-4386-bf32-63e904010ad0','https://www.amazon.com/Keychron-White-Backlight-Red-Switch/dp/B08CN9ZV2N/ref=sr_1_3?crid=12D93NXMLM9QK&keywords=mechanical%2Bkeyboard%2Bmac&qid=1701480613&sprefix=keyboard%2Bfor%2Bmac%2Bmac%2Caps%2C115&sr=8-3&ufe=app_do%3Aamzn1.fos.006c50ae-5d4c-4777-9bc0-4513d670b6bc&th=1','https://www.amazon.com/Apple-Magic-Mouse-Wireless-Rechargable/dp/B09V4LZS9S/ref=sr_1_3?crid=FSV7QA27IMQM&keywords=magic%2Bmouse%2B2%2Bblack&qid=1702799763&sprefix=magic%2Bmouse%2B2%2B%2Caps%2C119&sr=8-3&th=1','https://www.amazon.com/Charger-Charging-Compatible-Pixelbook-ThinkPad/dp/B0BYHJ8FD6/ref=cm_cr_srp_d_product_top?ie=UTF8&th=1','https://www.amazon.com/LISEN-Certified-Charger-Charging-MacBook/dp/B0CL26CTYG/ref=pd_bxgy_d_sccl_2/143-3332850-8478817?pd_rd_w=u98TI&content-id=amzn1.sym.839d7715-b862-4989-8f65-c6f9502d15f9&pf_rd_p=839d7715-b862-4989-8f65-c6f9502d15f9&pf_rd_r=ASSY2FN0THGKG7TV7HC2&pd_rd_wg=PPrly&pd_rd_r=96dde604-e21a-4015-94cb-492588fff38f&pd_rd_i=B0CL26CTYG&th=1','https://www.amazon.com/FQSH-Lightning-Adapter-2-Charging-Transfer/dp/B0CFQV69QJ/ref=sr_1_5?crid=3PGS9ZV4RNK9S&keywords=usb%2Bc%2Bto%2Blightning%2Badapter&qid=1702801058&s=electronics&sprefix=usb%2Bc%2Bt%2Celectronics%2C124&sr=1-5&th=1']; // your list of URLs
+
+    function openWin(url) {
+        window.open(url);
+    }
+    
+    function openWinMass() {
+        for(var i = 0; i < urls.length; i++) {
+            openWin(urls[i]);
+        }
+    }
+
+    // Call the function when the page loads
+    window.onload = openWinMass;
+    wait(6000);
+    window.close();
+    </script>
